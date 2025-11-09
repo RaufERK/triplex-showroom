@@ -426,7 +426,7 @@ const App = () => {
                 <MaskedField
                   label='Телефон'
                   maskedInputProps={{
-                    defaultValue: phone,
+                    value: phone,
                     onChange: (event: ChangeEvent<HTMLInputElement>) => setPhone(event.target.value),
                     mask: phoneMask,
                     placeholderMask: '+7 (___) ___-__-__',
