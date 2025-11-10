@@ -96,7 +96,7 @@ export const HomePage = () => {
   }
 
   return (
-    <div className={styles.page}>
+    <>
       <nav className={styles.quickNav}>
         {sectionLinks.map((link) => (
           <a key={link.id} href={`#${link.id}`} className={styles.quickLink}>
@@ -104,6 +104,7 @@ export const HomePage = () => {
           </a>
         ))}
       </nav>
+      <div className={styles.content}>
         <Section
           id='typography'
           title='Типографика'
@@ -506,7 +507,8 @@ export const HomePage = () => {
             </div>
           </ExampleCard>
         </Section>
-    </div>
+      </div>
+    </>
   )
 }
 
