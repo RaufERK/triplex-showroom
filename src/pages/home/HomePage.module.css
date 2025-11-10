@@ -6,28 +6,36 @@
 }
 
 .quickNav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
   display: flex;
   flex-wrap: wrap;
-  gap: 12px;
-  padding: 16px 20px;
+  gap: 8px;
+  padding: 12px 20px;
   background: var(--triplex-next-ColorNeutral-100-1-1-1, #ffffff);
-  border-radius: 16px;
-  box-shadow: 0 2px 8px rgba(31, 31, 34, 0.04);
+  border-radius: 0 0 16px 16px;
+  box-shadow: 0 4px 12px rgba(31, 31, 34, 0.08);
+  backdrop-filter: blur(8px);
+  margin-bottom: 32px;
 }
 
 .quickLink {
-  padding: 8px 14px;
-  border-radius: 10px;
+  padding: 8px 16px;
+  border-radius: 12px;
   text-decoration: none;
   color: var(--triplex-next-ColorDarkNeutral-50-1-1-1);
   font-size: 14px;
   font-weight: 500;
-  transition: background-color 0.2s ease, color 0.2s ease;
+  transition: all 0.2s ease;
+  border: 1px solid transparent;
 }
 
 .quickLink:hover {
-  background: var(--triplex-next-ColorNeutral-90-1-1-1);
-  color: var(--triplex-next-ColorBrand-50-1-1-1);
+  background: var(--triplex-next-ColorBrand-90-1-1-1);
+  color: var(--triplex-next-ColorBrand-30-1-1-1);
+  border-color: var(--triplex-next-ColorBrand-70-1-1-1);
+  transform: translateY(-1px);
 }
 
 @media (max-width: 1200px) {
