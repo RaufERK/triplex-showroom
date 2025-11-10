@@ -1,0 +1,28 @@
+.card {
+  background: var(--triplex-next-ColorNeutral-100-1-1-1, #ffffff);
+  border: 1px solid var(--triplex-next-ColorNeutral-60-1-1-1, #e7e9ee);
+  border-radius: 24px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  box-shadow: 0 16px 32px rgba(31, 31, 34, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 20px 36px rgba(31, 31, 34, 0.12);
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.body {
+  display: flex;
+  flex-direction: column;
+}
+
