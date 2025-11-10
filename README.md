@@ -71,4 +71,13 @@ export default defineConfig([
   },
 ])
 ```
-# triplex-showroom
+
+# Triplex Showroom
+
+Showcase приложение для демонстрации компонентов Triplex UI от Сбербанка.
+
+## Деплой
+
+```bash
+npm run deploy
+```
