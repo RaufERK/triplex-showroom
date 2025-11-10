@@ -9,6 +9,7 @@ module.exports = {
       'post-deploy': [
         'source ~/.nvm/nvm.sh && nvm use --lts',
         'npm ci --include=dev',
+        'rm -rf dist',
         'npm run build',
         'sudo chown -R www-data:www-data dist/',
         'sudo systemctl reload nginx',
