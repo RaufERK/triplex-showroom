@@ -5,19 +5,20 @@
   display: flex;
   flex-wrap: wrap;
   gap: 8px;
-  padding: 12px 20px;
+  padding: 16px 64px;
   background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(12px);
   box-shadow: 0 2px 16px rgba(31, 31, 34, 0.1);
-  margin: -48px -64px 32px -64px;
   border-bottom: 1px solid var(--triplex-next-ColorNeutral-60-1-1-1);
 }
 
 .content {
+  flex: 1;
   padding: 48px 64px;
   display: flex;
   flex-direction: column;
   gap: 64px;
+  overflow-y: auto;
 }
 
 .quickLink {
@@ -44,7 +45,7 @@
   }
 
   .quickNav {
-    margin: -32px -24px 24px -24px;
+    padding: 16px 24px;
   }
 }
 
@@ -54,8 +55,7 @@
   }
 
   .quickNav {
-    margin: -24px -20px 20px -20px;
-    padding: 10px 16px;
+    padding: 10px 20px;
     gap: 6px;
   }
 
