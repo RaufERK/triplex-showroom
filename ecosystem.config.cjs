@@ -8,7 +8,7 @@ module.exports = {
       path: '/home/appuser/apps/triplex-app',
       'post-deploy': [
         'source ~/.nvm/nvm.sh && nvm use --lts',
-        'npm ci',
+        'npm ci --include=dev',
         'npm run build',
         'sudo chown -R www-data:www-data dist/',
         'sudo systemctl reload nginx',
