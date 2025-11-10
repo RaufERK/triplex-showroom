@@ -1,0 +1,77 @@
+.palette {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.shades {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+  gap: 8px;
+  padding: 12px;
+  background: var(--triplex-next-ColorNeutral-95-1-1-1, #f8f9fb);
+  border-radius: 16px;
+}
+
+.shade {
+  aspect-ratio: 1;
+  border-radius: 12px;
+  display: flex;
+  align-items: flex-end;
+  padding: 8px;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  box-shadow: 0 2px 8px rgba(31, 31, 34, 0.08);
+  position: relative;
+}
+
+.shade:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(31, 31, 34, 0.16);
+}
+
+.shadePrimary {
+  box-shadow: 0 4px 12px rgba(33, 161, 154, 0.3);
+  border: 2px solid var(--triplex-next-ColorBrand-50-1-1-1);
+}
+
+.shadeInfo {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.shadeLabel {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(4px);
+  padding: 2px 6px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 11px;
+}
+
+.primaryBadge {
+  font-size: 14px;
+}
+
+.variable {
+  font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+  padding: 8px 12px;
+  background: var(--triplex-next-ColorNeutral-90-1-1-1);
+  border-radius: 8px;
+  user-select: all;
+}
+
+@media (max-width: 768px) {
+  .shades {
+    grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+    gap: 6px;
+  }
+}
+

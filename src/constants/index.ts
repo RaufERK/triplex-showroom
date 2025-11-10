@@ -2,6 +2,7 @@ export * from './industries'
 export * from './insights'
 export * from './payments'
 export * from './navigation'
+export * from './colors'
 
 export const phoneMask: (string | RegExp)[] = [
   '+',

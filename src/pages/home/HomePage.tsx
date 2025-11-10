@@ -96,27 +96,14 @@ export const HomePage = () => {
   }
 
   return (
-    <div className={styles.app}>
-      <aside className={styles.sidebar}>
-        <div className={styles.sidebarHeader}>
-          <Title size={ETitleSize.H2} tag='h1'>
-            Triplex Next UI Kit
-          </Title>
-          <Text size={ETextSize.B3} type={EFontType.SECONDARY}>
-            Демонстрация ключевых компонентов дизайн-системы Triplex Next в контексте React + TypeScript.
-          </Text>
-        </div>
-        <nav className={styles.nav}>
-          {sectionLinks.map((link) => (
-            <a key={link.id} href={`#${link.id}`} className={styles.navLink}>
-              <Text tag='span' size={ETextSize.B3} type={EFontType.PRIMARY}>
-                {link.title}
-              </Text>
-            </a>
-          ))}
-        </nav>
-      </aside>
-      <main className={styles.content}>
+    <div className={styles.page}>
+      <nav className={styles.quickNav}>
+        {sectionLinks.map((link) => (
+          <a key={link.id} href={`#${link.id}`} className={styles.quickLink}>
+            {link.title}
+          </a>
+        ))}
+      </nav>
         <Section
           id='typography'
           title='Типографика'
@@ -519,7 +506,6 @@ export const HomePage = () => {
             </div>
           </ExampleCard>
         </Section>
-      </main>
     </div>
   )
 }
