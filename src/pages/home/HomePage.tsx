@@ -11,7 +11,7 @@ import {
   List,
   ListItem,
   LoaderSmall,
-  LoaderWidget,
+  LoaderMiddle,
   MaskedField,
   Pagination,
   Radio,
@@ -23,15 +23,12 @@ import {
   Title,
   EAlertType,
   EButtonIconShape,
-  EButtonSize,
+  EComponentSize,
   EButtonTheme,
   ECaptionSize,
   ECardTheme,
   EFontType,
-  EIslandBorderRadius,
-  EIslandPaddingSize,
   EIslandType,
-  ELoaderSmallSize,
   ELoaderSmallTheme,
   ESegmentedControlSize,
   ESegmentedControlTheme,
@@ -201,17 +198,17 @@ export const HomePage = () => {
             <div className='inline inline--wrap'>
               <Button
                 theme={EButtonTheme.GENERAL}
-                size={EButtonSize.MD}
+                size={EComponentSize.MD}
                 icon={<ArrowrightStrokeSrvIcon24 paletteIndex={0} />}
               >
                 Продолжить
               </Button>
-              <Button theme={EButtonTheme.DANGER} size={EButtonSize.MD}>
+              <Button theme={EButtonTheme.DANGER} size={EComponentSize.MD}>
                 Удалить
               </Button>
               <Button
                 theme={EButtonTheme.GENERAL}
-                size={EButtonSize.SM}
+                size={EComponentSize.SM}
                 loading
                 icon={<SearchStrokeSrvIcon24 paletteIndex={0} />}
               >
@@ -221,13 +218,13 @@ export const HomePage = () => {
           </ExampleCard>
           <ExampleCard title='Вторичные сценарии' description='Для альтернативных или дополнительных действий.'>
             <div className='inline inline--wrap'>
-              <Button theme={EButtonTheme.SECONDARY} size={EButtonSize.MD}>
+              <Button theme={EButtonTheme.SECONDARY} size={EComponentSize.MD}>
                 Настроить
               </Button>
-              <Button theme={EButtonTheme.SECONDARY_LIGHT} size={EButtonSize.MD}>
+              <Button theme={EButtonTheme.SECONDARY_LIGHT} size={EComponentSize.MD}>
                 Фильтры
               </Button>
-              <Button theme={EButtonTheme.LINK} size={EButtonSize.MD}>
+              <Button theme={EButtonTheme.LINK} size={EComponentSize.MD}>
                 Подробнее
               </Button>
             </div>
@@ -249,7 +246,7 @@ export const HomePage = () => {
               <div className='icon-actions__item'>
                 <Button
                   theme={EButtonTheme.SECONDARY}
-                  size={EButtonSize.SM}
+                  size={EComponentSize.SM}
                   icon={<ArrowrightStrokeSrvIcon24 paletteIndex={3} />}
                 >
                   Экспорт
@@ -320,7 +317,7 @@ export const HomePage = () => {
                 </Radio>
               </div>
               <div className='form-actions'>
-                <Button theme={EButtonTheme.GENERAL} size={EButtonSize.MD} type='submit'>
+                <Button theme={EButtonTheme.GENERAL} size={EComponentSize.MD} type='submit'>
                   Сохранить
                 </Button>
               </div>
@@ -352,7 +349,7 @@ export const HomePage = () => {
                 </Text>
                 <Button
                   theme={EButtonTheme.SECONDARY_LIGHT}
-                  size={EButtonSize.SM}
+                  size={EComponentSize.SM}
                   icon={<ArrowrightStrokeSrvIcon24 paletteIndex={3} />}
                 >
                   Подробнее
@@ -383,7 +380,7 @@ export const HomePage = () => {
             </List>
           </ExampleCard>
           <ExampleCard title='Остров метрик' description='Компонент Island для компактного отображения аналитики.'>
-            <Island type={EIslandType.TYPE_2} paddingSize={EIslandPaddingSize.LG} borderRadius={EIslandBorderRadius.MD}>
+            <Island type={EIslandType.TYPE_2} paddingSize={32} borderRadius={24}>
               <Island.Header>
                 <Text size={ETextSize.B2} type={EFontType.BRAND}>
                   Пульс бизнеса
@@ -407,7 +404,7 @@ export const HomePage = () => {
                 </div>
               </Island.Body>
               <Island.Footer>
-                <Button theme={EButtonTheme.SECONDARY_LIGHT} size={EButtonSize.SM}>
+                <Button theme={EButtonTheme.SECONDARY_LIGHT} size={EComponentSize.SM}>
                   Открыть отчёт
                 </Button>
               </Island.Footer>
@@ -431,7 +428,7 @@ export const HomePage = () => {
                   </Text>
                 </AlertProcess>
               ) : (
-                <Button theme={EButtonTheme.SECONDARY} size={EButtonSize.SM} onClick={() => setAlertVisible(true)}>
+                <Button theme={EButtonTheme.SECONDARY} size={EComponentSize.SM} onClick={() => setAlertVisible(true)}>
                   Показать уведомление
                 </Button>
               )}
@@ -440,9 +437,9 @@ export const HomePage = () => {
           <ExampleCard title='Загрузка данных'>
             <div className='stack'>
               <div className='inline inline--center'>
-                <LoaderSmall theme={ELoaderSmallTheme.BRAND} size={ELoaderSmallSize.SM} />
-                <LoaderSmall theme={ELoaderSmallTheme.BRAND} size={ELoaderSmallSize.MD} />
-                <LoaderSmall theme={ELoaderSmallTheme.NEUTRAL} size={ELoaderSmallSize.LG} />
+                <LoaderSmall theme={ELoaderSmallTheme.BRAND} size={EComponentSize.SM} />
+                <LoaderSmall theme={ELoaderSmallTheme.BRAND} size={EComponentSize.MD} />
+                <LoaderSmall theme={ELoaderSmallTheme.NEUTRAL} size={EComponentSize.LG} />
               </div>
               <div className='stack stack--tight'>
                 <Skeleton style={{ width: '60%', height: 12, borderRadius: 8 }} />
@@ -451,11 +448,11 @@ export const HomePage = () => {
               </div>
             </div>
           </ExampleCard>
-          <ExampleCard title='Overlay лоадер' description='LoaderWidget накрывает контент и показывает прогресс операции.'>
+          <ExampleCard title='Overlay лоадер' description='LoaderMiddle накрывает контент и показывает прогресс операции.'>
             <div className='loader-widget-demo'>
               {isWidgetLoading && (
                 <div className='loader-widget-demo__overlay'>
-                  <LoaderWidget type='middle' />
+                  <LoaderMiddle />
                 </div>
               )}
               <div className='stack'>
@@ -466,7 +463,7 @@ export const HomePage = () => {
                 <div className='loader-widget-demo__actions'>
                   <Button
                     theme={EButtonTheme.GENERAL}
-                    size={EButtonSize.MD}
+                    size={EComponentSize.MD}
                     type='button'
                     disabled={isWidgetLoading}
                     onClick={handleSync}
