@@ -12,7 +12,6 @@
     "deploy:setup": "pm2 deploy ecosystem.config.cjs production setup"
   },
   "dependencies": {
-    "@sberbusiness/icons": "^6.42.0",
     "@sberbusiness/icons-next": "^1.5.0",
     "@sberbusiness/triplex-next": "^1.3.0",
     "react": "^18.3.1",
