@@ -80,6 +80,52 @@
   color: var(--triplex-next-ColorBrand-30-1-1-1);
 }
 
+.iconsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  gap: 24px;
+  padding: 20px 0;
+}
+
+.iconCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 24px;
+  background: var(--triplex-next-ColorNeutral-100-1-1-1);
+  border: 1px solid var(--triplex-next-ColorNeutral-60-1-1-1);
+  border-radius: 16px;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.iconCard:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(31, 31, 34, 0.12);
+  border-color: var(--triplex-next-ColorBrand-50-1-1-1);
+}
+
+.iconWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  background: var(--triplex-next-ColorNeutral-90-1-1-1);
+  border-radius: 12px;
+  padding: 12px;
+}
+
+.iconName {
+  font-family: 'SF Mono', 'Monaco', 'Courier New', monospace;
+  font-size: 11px;
+  text-align: center;
+  word-break: break-all;
+  color: var(--triplex-next-ColorDarkNeutral-50-1-1-1);
+  user-select: all;
+}
+
 @media (max-width: 1200px) {
   .page {
     padding: 32px 24px;
@@ -90,6 +136,20 @@
   .page {
     padding: 24px 20px;
     gap: 48px;
+  }
+
+  .iconsGrid {
+    grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
+    gap: 16px;
+  }
+
+  .iconCard {
+    padding: 16px;
+  }
+
+  .iconWrapper {
+    width: 60px;
+    height: 60px;
   }
 
   .sizesDemo {

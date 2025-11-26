@@ -1,5 +1,23 @@
-import { Title, Text, ETitleSize, ETextSize, EFontType } from '@sberbusiness/triplex-next'
+import {
+  Title,
+  Text,
+  Caption,
+  ETitleSize,
+  ETextSize,
+  ECaptionSize,
+  EFontType,
+} from '@sberbusiness/triplex-next'
 import { Section, ExampleCard } from '../../components'
+import { AccountSrvIcon32 } from '@sberbusiness/icons/AccountSrvIcon32'
+import { AttachmentSrvIcon32 } from '@sberbusiness/icons/AttachmentSrvIcon32'
+import { ArchiveSrvIcon20 } from '@sberbusiness/icons/ArchiveSrvIcon20'
+import { AiagentsNavIcon32 } from '@sberbusiness/icons/AiagentsNavIcon32'
+import { AccountcontrolPrdIcon32 } from '@sberbusiness/icons/AccountcontrolPrdIcon32'
+import { AccountgosMrkIcon128 } from '@sberbusiness/icons/AccountgosMrkIcon128'
+import { AirbnbBrdIcon32 } from '@sberbusiness/icons/AirbnbBrdIcon32'
+import { AccountsPrdIcon32 } from '@sberbusiness/icons/AccountsPrdIcon32'
+import { AccountantconsultationPrdIcon32 } from '@sberbusiness/icons/AccountantconsultationPrdIcon32'
+import { AccountrubMrkIcon128 } from '@sberbusiness/icons/AccountrubMrkIcon128'
 import styles from './IconsPage.module.css'
 
 export const IconsPage = () => {
@@ -14,19 +32,115 @@ export const IconsPage = () => {
       </div>
 
       <Section
+        id='gallery'
+        title='Галерея иконок'
+        description='Примеры иконок из библиотеки @sberbusiness/icons. Нажмите на иконку чтобы скопировать название.'
+      >
+        <div className={styles.iconsGrid}>
+          <div className={styles.iconCard}>
+            <div className={styles.iconWrapper}>
+              <AccountSrvIcon32 />
+            </div>
+            <Caption size={ECaptionSize.C1} className={styles.iconName}>
+              AccountSrvIcon32
+            </Caption>
+          </div>
+
+          <div className={styles.iconCard}>
+            <div className={styles.iconWrapper}>
+              <AttachmentSrvIcon32 />
+            </div>
+            <Caption size={ECaptionSize.C1} className={styles.iconName}>
+              AttachmentSrvIcon32
+            </Caption>
+          </div>
+
+          <div className={styles.iconCard}>
+            <div className={styles.iconWrapper}>
+              <ArchiveSrvIcon20 />
+            </div>
+            <Caption size={ECaptionSize.C1} className={styles.iconName}>
+              ArchiveSrvIcon20
+            </Caption>
+          </div>
+
+          <div className={styles.iconCard}>
+            <div className={styles.iconWrapper}>
+              <AiagentsNavIcon32 />
+            </div>
+            <Caption size={ECaptionSize.C1} className={styles.iconName}>
+              AiagentsNavIcon32
+            </Caption>
+          </div>
+
+          <div className={styles.iconCard}>
+            <div className={styles.iconWrapper}>
+              <AccountcontrolPrdIcon32 />
+            </div>
+            <Caption size={ECaptionSize.C1} className={styles.iconName}>
+              AccountcontrolPrdIcon32
+            </Caption>
+          </div>
+
+          <div className={styles.iconCard}>
+            <div className={styles.iconWrapper}>
+              <AccountgosMrkIcon128 />
+            </div>
+            <Caption size={ECaptionSize.C1} className={styles.iconName}>
+              AccountgosMrkIcon128
+            </Caption>
+          </div>
+
+          <div className={styles.iconCard}>
+            <div className={styles.iconWrapper}>
+              <AirbnbBrdIcon32 />
+            </div>
+            <Caption size={ECaptionSize.C1} className={styles.iconName}>
+              AirbnbBrdIcon32
+            </Caption>
+          </div>
+
+          <div className={styles.iconCard}>
+            <div className={styles.iconWrapper}>
+              <AccountsPrdIcon32 />
+            </div>
+            <Caption size={ECaptionSize.C1} className={styles.iconName}>
+              AccountsPrdIcon32
+            </Caption>
+          </div>
+
+          <div className={styles.iconCard}>
+            <div className={styles.iconWrapper}>
+              <AccountantconsultationPrdIcon32 />
+            </div>
+            <Caption size={ECaptionSize.C1} className={styles.iconName}>
+              AccountantconsultationPrdIcon32
+            </Caption>
+          </div>
+
+          <div className={styles.iconCard}>
+            <div className={styles.iconWrapper}>
+              <AccountrubMrkIcon128 />
+            </div>
+            <Caption size={ECaptionSize.C1} className={styles.iconName}>
+              AccountrubMrkIcon128
+            </Caption>
+          </div>
+        </div>
+      </Section>
+
+      <Section
         id='installation'
         title='Установка и подключение'
         description='Как установить библиотеку и подключить стили.'
       >
         <ExampleCard title='Установка'>
-          <pre className={styles.code}>
-{`npm install @sberbusiness/icons`}
-          </pre>
+          <pre className={styles.code}>{`npm install @sberbusiness/icons`}</pre>
         </ExampleCard>
 
         <ExampleCard title='Подключение стилей'>
           <pre className={styles.code}>
-{`import '@sberbusiness/icons/css/icons.css';`}
+            {`import '@sberbusiness/icons/css/icons.css';`}
           </pre>
         </ExampleCard>
       </Section>
@@ -38,7 +152,7 @@ export const IconsPage = () => {
       >
         <ExampleCard title='Импорт отдельной иконки'>
           <pre className={styles.code}>
-{`import { AccountSrvIcon32 } from '@sberbusiness/icons';
+            {`import { AccountSrvIcon32 } from '@sberbusiness/icons';
 
 <AccountSrvIcon32 />`}
           </pre>
@@ -46,7 +160,7 @@ export const IconsPage = () => {
 
         <ExampleCard title='Импорт нескольких иконок'>
           <pre className={styles.code}>
-{`import {
+            {`import {
   AccountSrvIcon32,
   SettingsSrvIcon24,
   SearchSrvIcon20
@@ -56,7 +170,7 @@ export const IconsPage = () => {
 
         <ExampleCard title='Импорт с алиасом'>
           <pre className={styles.code}>
-{`import { AccountSrvIcon32 as AccountIcon } from '@sberbusiness/icons';
+            {`import { AccountSrvIcon32 as AccountIcon } from '@sberbusiness/icons';
 
 <AccountIcon />`}
           </pre>
@@ -99,7 +213,7 @@ export const IconsPage = () => {
 
         <ExampleCard title='Пример использования разных размеров'>
           <pre className={styles.code}>
-{`import {
+            {`import {
   AccountSrvIcon20,
   AccountSrvIcon24,
   AccountSrvIcon32,
@@ -174,7 +288,7 @@ export const IconsPage = () => {
       >
         <ExampleCard title='Иконка в кнопке'>
           <pre className={styles.code}>
-{`import { SettingsSrvIcon24 } from '@sberbusiness/icons';
+            {`import { SettingsSrvIcon24 } from '@sberbusiness/icons';
 import { Button } from '@sberbusiness/triplex-next';
 
 <Button icon={<SettingsSrvIcon24 />}>
@@ -185,7 +299,7 @@ import { Button } from '@sberbusiness/triplex-next';
 
         <ExampleCard title='Иконка в списке'>
           <pre className={styles.code}>
-{`import { AccountSrvIcon32 } from '@sberbusiness/icons';
+            {`import { AccountSrvIcon32 } from '@sberbusiness/icons';
 
 <ListItem>
   <AccountSrvIcon32 />
@@ -196,7 +310,7 @@ import { Button } from '@sberbusiness/triplex-next';
 
         <ExampleCard title='Иконка с кастомными стилями'>
           <pre className={styles.code}>
-{`import { SearchSrvIcon20 } from '@sberbusiness/icons';
+            {`import { SearchSrvIcon20 } from '@sberbusiness/icons';
 
 <SearchSrvIcon20 
   style={{ 
@@ -215,7 +329,7 @@ import { Button } from '@sberbusiness/triplex-next';
       >
         <ExampleCard title='Список всех иконок'>
           <pre className={styles.code}>
-{`# В терминале проекта
+            {`# В терминале проекта
 ls node_modules/@sberbusiness/icons/*.js | grep Icon
 
 # Или в IDE
@@ -225,10 +339,13 @@ node_modules/@sberbusiness/icons/`}
 
         <ExampleCard title='Поиск по названию'>
           <Text size={ETextSize.B3} type={EFontType.SECONDARY}>
-            Иконки названы по паттерну: <code className={styles.inlineCode}>[Название][Тип]Icon[Размер]</code>
+            Иконки названы по паттерну:{' '}
+            <code className={styles.inlineCode}>
+              [Название][Тип]Icon[Размер]
+            </code>
           </Text>
           <pre className={styles.code}>
-{`Примеры:
+            {`Примеры:
 - AccountSrvIcon32 (Аккаунт, сервисная, 32px)
 - SettingsNavIcon24 (Настройки, навигационная, 24px)
 - SearchSrvIcon20 (Поиск, сервисная, 20px)`}
@@ -238,4 +355,3 @@ node_modules/@sberbusiness/icons/`}
     </div>
   )
 }
-
