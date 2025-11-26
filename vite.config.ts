@@ -9,7 +9,4 @@ export default defineConfig({
       filter: (id: string) => id.includes('@sberbusiness/icons'),
     }),
   ],
-  optimizeDeps: {
-    include: ['@sberbusiness/icons'],
-  },
 });
