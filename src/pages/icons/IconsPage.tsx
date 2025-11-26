@@ -28,6 +28,23 @@ export const IconsPage = () => {
     .filter(([name]) => !ICONS_BLACKLIST.has(name))
     .sort(([a], [b]) => a.localeCompare(b))
 
+  const groups: Record<string, typeof iconEntries> = {}
+
+  const getGroupName = (name: string): string => {
+    if (name.includes('NavIcon')) return 'Навигационные'
+    if (name.includes('MkrIcon')) return 'Маркеры / иллюстрации'
+    if (name.includes('PrdIcon')) return 'Продуктовые'
+    if (name.includes('StsIcon')) return 'Статусы'
+    return 'Прочие'
+  }
+
+  iconEntries.forEach((entry) => {
+    const [name] = entry
+    const group = getGroupName(name)
+    if (!groups[group]) groups[group] = []
+    groups[group].push(entry)
+  })
+
   return (
     <div className={styles.page}>
       <div className={styles.hero}>
@@ -102,24 +119,40 @@ export const IconsPage = () => {
 
       <Section
         id='all-icons'
-        title='Все иконки из @sberbusiness/icons-next'
-        description='Полная галерея экспортируемых иконок из библиотеки.'
+        title='Все иконки по сериям'
+        description='Полная галерея экспортируемых иконок из библиотеки, сгруппированная по семействам.'
       >
-        <div className={styles.iconsGrid}>
-          {iconEntries.map(([name, IconComponent]) => {
-            const Icon = IconComponent as any
-            return (
-              <div key={name} className={styles.iconCard}>
-                <div className={styles.iconWrapper}>
-                  {React.createElement(Icon, { paletteIndex: 0 })}
-                </div>
-                <Caption size={ECaptionSize.C1} className={styles.iconName}>
-                  {name}
-                </Caption>
+        {Object.entries(groups).map(([groupName, entries]) =>
+          entries.length ? (
+            <div key={groupName} className={styles.iconGroup}>
+              <Title
+                size={ETitleSize.H3}
+                tag='h3'
+                className={styles.iconGroupTitle}
+              >
+                {groupName}
+              </Title>
+              <div className={styles.iconGroupGrid}>
+                {entries.map(([name, IconComponent]) => {
+                  const Icon = IconComponent as any
+                  return (
+                    <div key={name} className={styles.iconRow}>
+                      <div className={styles.iconRowIcon}>
+                        {React.createElement(Icon, { paletteIndex: 5 })}
+                      </div>
+                      <Caption
+                        size={ECaptionSize.C1}
+                        className={styles.iconRowName}
+                      >
+                        {name}
+                      </Caption>
+                    </div>
+                  )
+                })}
               </div>
-            )
-          })}
-        </div>
+            </div>
+          ) : null
+        )}
       </Section>
 
       <Section
