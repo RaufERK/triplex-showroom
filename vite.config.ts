@@ -1,6 +1,15 @@
 import { defineConfig } from 'vite';
 import react from '@vitejs/plugin-react';
+import viteCommonjs from 'vite-plugin-commonjs';
 
 export default defineConfig({
-  plugins: [react()],
+  plugins: [
+    react(),
+    viteCommonjs({
+      filter: (id: string) => id.includes('@sberbusiness/icons'),
+    }),
+  ],
+  optimizeDeps: {
+    include: ['@sberbusiness/icons'],
+  },
 });
