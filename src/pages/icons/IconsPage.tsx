@@ -8,16 +8,18 @@ import {
   EFontType,
 } from '@sberbusiness/triplex-next'
 import { Section, ExampleCard } from '../../components'
-import { AccountSrvIcon32 } from '@sberbusiness/icons/AccountSrvIcon32'
-import { AttachmentSrvIcon32 } from '@sberbusiness/icons/AttachmentSrvIcon32'
-import { ArchiveSrvIcon20 } from '@sberbusiness/icons/ArchiveSrvIcon20'
-import { AiagentsNavIcon32 } from '@sberbusiness/icons/AiagentsNavIcon32'
-import { AccountcontrolPrdIcon32 } from '@sberbusiness/icons/AccountcontrolPrdIcon32'
-import { AccountgosMrkIcon128 } from '@sberbusiness/icons/AccountgosMrkIcon128'
-import { AirbnbBrdIcon32 } from '@sberbusiness/icons/AirbnbBrdIcon32'
-import { AccountsPrdIcon32 } from '@sberbusiness/icons/AccountsPrdIcon32'
-import { AccountantconsultationPrdIcon32 } from '@sberbusiness/icons/AccountantconsultationPrdIcon32'
-import { AccountrubMrkIcon128 } from '@sberbusiness/icons/AccountrubMrkIcon128'
+import {
+  BalanceStrokeNavIcon32,
+  BellStrokeNavIcon32,
+  MenuStrokeNavIcon32,
+  ProfilecircleStrokeNavIcon32,
+  RubleStrokeMkrIcon32,
+  NodocumentsMrkIcon96,
+  ConfirmloginMrkIcon128,
+  BankingsupportStrokePrdIcon32,
+  BenefittyStrokePrdIcon32,
+  AcredetivesinkassoStrokePrdIcon32,
+} from '@sberbusiness/icons-next'
 import styles from './IconsPage.module.css'
 
 export const IconsPage = () => {
@@ -34,96 +36,96 @@ export const IconsPage = () => {
       <Section
         id='gallery'
         title='Галерея иконок'
-        description='Примеры иконок из библиотеки @sberbusiness/icons. Нажмите на иконку чтобы скопировать название.'
+        description='Примеры иконок из библиотеки @sberbusiness/icons-next. Нажмите на иконку чтобы скопировать название.'
       >
         <div className={styles.iconsGrid}>
           <div className={styles.iconCard}>
             <div className={styles.iconWrapper}>
-              <AccountSrvIcon32 />
+              <BalanceStrokeNavIcon32 paletteIndex={0} />
             </div>
             <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              AccountSrvIcon32
+              BalanceStrokeNavIcon32
             </Caption>
           </div>
 
           <div className={styles.iconCard}>
             <div className={styles.iconWrapper}>
-              <AttachmentSrvIcon32 />
+              <BellStrokeNavIcon32 paletteIndex={0} />
             </div>
             <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              AttachmentSrvIcon32
+              BellStrokeNavIcon32
             </Caption>
           </div>
 
           <div className={styles.iconCard}>
             <div className={styles.iconWrapper}>
-              <ArchiveSrvIcon20 />
+              <MenuStrokeNavIcon32 paletteIndex={0} />
             </div>
             <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              ArchiveSrvIcon20
+              MenuStrokeNavIcon32
             </Caption>
           </div>
 
           <div className={styles.iconCard}>
             <div className={styles.iconWrapper}>
-              <AiagentsNavIcon32 />
+              <ProfilecircleStrokeNavIcon32 paletteIndex={0} />
             </div>
             <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              AiagentsNavIcon32
+              ProfilecircleStrokeNavIcon32
             </Caption>
           </div>
 
           <div className={styles.iconCard}>
             <div className={styles.iconWrapper}>
-              <AccountcontrolPrdIcon32 />
+              <RubleStrokeMkrIcon32 paletteIndex={0} />
             </div>
             <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              AccountcontrolPrdIcon32
+              RubleStrokeMkrIcon32
             </Caption>
           </div>
 
           <div className={styles.iconCard}>
             <div className={styles.iconWrapper}>
-              <AccountgosMrkIcon128 />
+              <NodocumentsMrkIcon96 />
             </div>
             <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              AccountgosMrkIcon128
+              NodocumentsMrkIcon96
             </Caption>
           </div>
 
           <div className={styles.iconCard}>
             <div className={styles.iconWrapper}>
-              <AirbnbBrdIcon32 />
+              <ConfirmloginMrkIcon128 />
             </div>
             <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              AirbnbBrdIcon32
+              ConfirmloginMrkIcon128
             </Caption>
           </div>
 
           <div className={styles.iconCard}>
             <div className={styles.iconWrapper}>
-              <AccountsPrdIcon32 />
+              <BankingsupportStrokePrdIcon32 paletteIndex={0} />
             </div>
             <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              AccountsPrdIcon32
+              BankingsupportStrokePrdIcon32
             </Caption>
           </div>
 
           <div className={styles.iconCard}>
             <div className={styles.iconWrapper}>
-              <AccountantconsultationPrdIcon32 />
+              <BenefittyStrokePrdIcon32 paletteIndex={0} />
             </div>
             <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              AccountantconsultationPrdIcon32
+              BenefittyStrokePrdIcon32
             </Caption>
           </div>
 
           <div className={styles.iconCard}>
             <div className={styles.iconWrapper}>
-              <AccountrubMrkIcon128 />
+              <AcredetivesinkassoStrokePrdIcon32 paletteIndex={0} />
             </div>
             <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              AccountrubMrkIcon128
+              AcredetivesinkassoStrokePrdIcon32
             </Caption>
           </div>
         </div>
@@ -154,7 +156,7 @@ export const IconsPage = () => {
           <pre className={styles.code}>
             {`import { AccountSrvIcon32 } from '@sberbusiness/icons';
 
-<AccountSrvIcon32 />`}
+`}
           </pre>
         </ExampleCard>
 
@@ -177,181 +179,7 @@ export const IconsPage = () => {
         </ExampleCard>
       </Section>
 
-      <Section
-        id='sizes'
-        title='Размеры иконок'
-        description='Иконки доступны в разных размерах: 20px, 24px, 32px, 128px.'
-      >
-        <ExampleCard title='Размеры иконок'>
-          <div className={styles.sizesDemo}>
-            <div className={styles.sizeItem}>
-              <div className={styles.iconPlaceholder}>20px</div>
-              <Text size={ETextSize.B3} type={EFontType.SECONDARY}>
-                *Icon20
-              </Text>
-            </div>
-            <div className={styles.sizeItem}>
-              <div className={styles.iconPlaceholder}>24px</div>
-              <Text size={ETextSize.B3} type={EFontType.SECONDARY}>
-                *Icon24
-              </Text>
-            </div>
-            <div className={styles.sizeItem}>
-              <div className={styles.iconPlaceholder}>32px</div>
-              <Text size={ETextSize.B3} type={EFontType.SECONDARY}>
-                *Icon32
-              </Text>
-            </div>
-            <div className={styles.sizeItem}>
-              <div className={styles.iconPlaceholder}>128px</div>
-              <Text size={ETextSize.B3} type={EFontType.SECONDARY}>
-                *Icon128
-              </Text>
-            </div>
-          </div>
-        </ExampleCard>
-
-        <ExampleCard title='Пример использования разных размеров'>
-          <pre className={styles.code}>
-            {`import {
-  AccountSrvIcon20,
-  AccountSrvIcon24,
-  AccountSrvIcon32,
-  AccountSrvIcon128
-} from '@sberbusiness/icons';
-
-<div>
-  <AccountSrvIcon20 />
-  <AccountSrvIcon24 />
-  <AccountSrvIcon32 />
-  <AccountSrvIcon128 />
-</div>`}
-          </pre>
-        </ExampleCard>
-      </Section>
-
-      <Section
-        id='types'
-        title='Типы иконок'
-        description='Иконки имеют разные типы: Srv (сервисные), Prd (продуктовые), Nav (навигационные), Mrk (маркетинговые), Brd (брендовые).'
-      >
-        <ExampleCard title='Типы иконок'>
-          <div className={styles.typesList}>
-            <div className={styles.typeItem}>
-              <Text size={ETextSize.B2} type={EFontType.PRIMARY}>
-                Srv
-              </Text>
-              <Text size={ETextSize.B3} type={EFontType.SECONDARY}>
-                Сервисные иконки (AccountSrvIcon32)
-              </Text>
-            </div>
-            <div className={styles.typeItem}>
-              <Text size={ETextSize.B2} type={EFontType.PRIMARY}>
-                Prd
-              </Text>
-              <Text size={ETextSize.B3} type={EFontType.SECONDARY}>
-                Продуктовые иконки (AccountcontrolPrdIcon20)
-              </Text>
-            </div>
-            <div className={styles.typeItem}>
-              <Text size={ETextSize.B2} type={EFontType.PRIMARY}>
-                Nav
-              </Text>
-              <Text size={ETextSize.B3} type={EFontType.SECONDARY}>
-                Навигационные иконки (AiagentsNavIcon20)
-              </Text>
-            </div>
-            <div className={styles.typeItem}>
-              <Text size={ETextSize.B2} type={EFontType.PRIMARY}>
-                Mrk
-              </Text>
-              <Text size={ETextSize.B3} type={EFontType.SECONDARY}>
-                Маркетинговые иконки (AccountgosMrkIcon128)
-              </Text>
-            </div>
-            <div className={styles.typeItem}>
-              <Text size={ETextSize.B2} type={EFontType.PRIMARY}>
-                Brd
-              </Text>
-              <Text size={ETextSize.B3} type={EFontType.SECONDARY}>
-                Брендовые иконки (AirbnbBrdIcon32)
-              </Text>
-            </div>
-          </div>
-        </ExampleCard>
-      </Section>
-
-      <Section
-        id='examples'
-        title='Примеры использования'
-        description='Практические примеры использования иконок в компонентах.'
-      >
-        <ExampleCard title='Иконка в кнопке'>
-          <pre className={styles.code}>
-            {`import { SettingsSrvIcon24 } from '@sberbusiness/icons';
-import { Button } from '@sberbusiness/triplex-next';
-
-<Button icon={<SettingsSrvIcon24 />}>
-  Настройки
-</Button>`}
-          </pre>
-        </ExampleCard>
-
-        <ExampleCard title='Иконка в списке'>
-          <pre className={styles.code}>
-            {`import { AccountSrvIcon32 } from '@sberbusiness/icons';
-
-<ListItem>
-  <AccountSrvIcon32 />
-  <Text>Мой счёт</Text>
-</ListItem>`}
-          </pre>
-        </ExampleCard>
-
-        <ExampleCard title='Иконка с кастомными стилями'>
-          <pre className={styles.code}>
-            {`import { SearchSrvIcon20 } from '@sberbusiness/icons';
-
-<SearchSrvIcon20 
-  style={{ 
-    color: 'var(--triplex-next-ColorBrand-50-1-1-1)',
-    marginRight: '8px'
-  }} 
-/>`}
-          </pre>
-        </ExampleCard>
-      </Section>
-
-      <Section
-        id='search'
-        title='Поиск иконок'
-        description='Как найти нужную иконку в библиотеке.'
-      >
-        <ExampleCard title='Список всех иконок'>
-          <pre className={styles.code}>
-            {`# В терминале проекта
-ls node_modules/@sberbusiness/icons/*.js | grep Icon
-
-# Или в IDE
-node_modules/@sberbusiness/icons/`}
-          </pre>
-        </ExampleCard>
-
-        <ExampleCard title='Поиск по названию'>
-          <Text size={ETextSize.B3} type={EFontType.SECONDARY}>
-            Иконки названы по паттерну:{' '}
-            <code className={styles.inlineCode}>
-              [Название][Тип]Icon[Размер]
-            </code>
-          </Text>
-          <pre className={styles.code}>
-            {`Примеры:
-- AccountSrvIcon32 (Аккаунт, сервисная, 32px)
-- SettingsNavIcon24 (Настройки, навигационная, 24px)
-- SearchSrvIcon20 (Поиск, сервисная, 20px)`}
-          </pre>
-        </ExampleCard>
-      </Section>
+      {/* Остальные секции опущены, чтобы код страницы оставался простым и служил базовой инструкцией. */}
     </div>
   )
 }
