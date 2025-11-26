@@ -1,0 +1,2 @@
+export { IconsPage } from './IconsPage'
+

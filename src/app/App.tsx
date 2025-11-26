@@ -2,8 +2,10 @@ import { BrowserRouter, Routes, Route, Link } from 'react-router-dom'
 import { Title, Text, ETitleSize, ETextSize, EFontType } from '@sberbusiness/triplex-next'
 import { HomePage } from '../pages/home'
 import { ColorsPage } from '../pages/colors'
+import { IconsPage } from '../pages/icons'
 import styles from './App.module.css'
 import '../styles/global.css'
+import '@sberbusiness/icons/css/icons.css'
 
 const App = () => {
   return (
@@ -29,12 +31,18 @@ const App = () => {
                 🎨 Цвета
               </Text>
             </Link>
+            <Link to='/icons' className={styles.navLink}>
+              <Text tag='span' size={ETextSize.B3} type={EFontType.PRIMARY}>
+                🔷 Иконки
+              </Text>
+            </Link>
           </nav>
         </aside>
         <main className={styles.content}>
           <Routes>
             <Route path='/' element={<HomePage />} />
             <Route path='/colors' element={<ColorsPage />} />
+            <Route path='/icons' element={<IconsPage />} />
           </Routes>
         </main>
       </div>
