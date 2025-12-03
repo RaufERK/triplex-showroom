@@ -10,7 +10,7 @@ type ColorPaletteProps = {
 }
 
 export const ColorPalette = ({ name, description, prefix, shades, primary }: ColorPaletteProps) => {
-  const getCSSVariable = (shade: number) => `${prefix}-${shade}-1-1-1`
+  const getCSSVariable = (shade: number) => `${prefix}-${shade}-1-4-0`
 
   return (
     <div className={styles.palette}>

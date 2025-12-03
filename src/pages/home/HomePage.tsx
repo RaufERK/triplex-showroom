@@ -36,6 +36,7 @@ import {
   ETextSize,
   ETitleSize,
 } from '@sberbusiness/triplex-next'
+import { LightBox } from '@sberbusiness/triplex-next'
 import {
   ArrowrightStrokeSrvIcon24,
   HeartStrokeSrvIcon24,
@@ -62,6 +63,7 @@ export const HomePage = () => {
   const [pageSize, setPageSize] = useState(20)
   const [isWidgetLoading, setIsWidgetLoading] = useState(false)
   const [widgetMessage, setWidgetMessage] = useState<string | null>(null)
+  const [isLightboxOpen, setIsLightboxOpen] = useState(false)
 
   useEffect(() => {
     if (!isWidgetLoading) {
@@ -380,7 +382,7 @@ export const HomePage = () => {
             </List>
           </ExampleCard>
           <ExampleCard title='Остров метрик' description='Компонент Island для компактного отображения аналитики.'>
-            <Island type={EIslandType.TYPE_2} paddingSize={32} borderRadius={24}>
+            <Island type={EIslandType.TYPE_2} size={EComponentSize.LG} style={{ borderRadius: 24, padding: 32 }}>
               <Island.Header>
                 <Text size={ETextSize.B2} type={EFontType.BRAND}>
                   Пульс бизнеса
@@ -504,6 +506,59 @@ export const HomePage = () => {
             </div>
           </ExampleCard>
         </Section>
+
+        {LightBox && (
+          <Section
+            id='overlays'
+            title='Мобильное меню и лайтбокс'
+            description='Пример просмотра контента поверх страницы с помощью компонента LightBox.'
+          >
+            <div className='stack'>
+                <ExampleCard
+                  title='LightBox'
+                  description='Пример просмотра контента поверх интерфейса с помощью компонента LightBox.'
+                >
+                  <div className='stack'>
+                    <Button
+                      theme={EButtonTheme.SECONDARY}
+                      size={EComponentSize.MD}
+                      type='button'
+                      onClick={() => setIsLightboxOpen(true)}
+                    >
+                      Открыть LightBox
+                    </Button>
+                    {isLightboxOpen && (
+                      <LightBox>
+                        {[
+                          <Title key='title' size={ETitleSize.H3} tag='h3'>
+                            Демонстрация LightBox
+                          </Title>,
+                          <Text key='text' size={ETextSize.B2} type={EFontType.SECONDARY}>
+                            Здесь можно показать крупное изображение, превью продукта или подробное описание операции.
+                          </Text>,
+                          <img
+                            key='image'
+                            className='card-media'
+                            src='https://placehold.co/960x540/21A19A/ffffff?text=Triplex+Lightbox'
+                            alt='Lightbox preview'
+                          />,
+                          <Button
+                            key='button'
+                            theme={EButtonTheme.GENERAL}
+                            size={EComponentSize.MD}
+                            type='button'
+                            onClick={() => setIsLightboxOpen(false)}
+                          >
+                            Закрыть
+                          </Button>,
+                        ]}
+                      </LightBox>
+                    )}
+                  </div>
+                </ExampleCard>
+            </div>
+          </Section>
+        )}
       </div>
     </>
   )

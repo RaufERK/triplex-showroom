@@ -10,14 +10,6 @@ import {
 } from '@sberbusiness/triplex-next'
 // import { BookkeeperblackAccIcon64 } from '@sberbusiness/icons/BookkeeperblackAccIcon64'
 import { Section, ExampleCard } from '../../components'
-import {
-  NodocumentsMrkIcon96,
-  ConfirmloginMrkIcon128,
-  GigaassistaintOtherBrdIcon20,
-  BalanceStrokeNavIcon20,
-  CardcreditmirMkrIcon32,
-  TouchidMrkIcon96,
-} from '@sberbusiness/icons-next'
 import * as Icons from '@sberbusiness/icons-next'
 import styles from './IconsPage.module.css'
 
@@ -58,62 +50,44 @@ export const IconsPage = () => {
       <Section
         id='gallery'
         title='Галерея иконок'
-        description='Две живые и яркие иконки, которые гарантированно видны и подходят для демо.'
+        description='Несколько ярких иконок из разных семейств, которые гарантированно есть в последней версии @sberbusiness/icons-next.'
       >
         <div className={styles.iconsGrid}>
-          <div className={styles.iconCard}>
-            <div className={styles.iconWrapper}>
-              <NodocumentsMrkIcon96 />
-            </div>
-            <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              NodocumentsMrkIcon96
-            </Caption>
-          </div>
+          {[
+            Icons.NodocumentsMrkIcon96,
+            Icons.ConfirmloginMrkIcon128,
+            Icons.CardcreditmirMkrIcon32,
+            Icons.GigaassistaintOtherBrdIcon20,
+            Icons.BalanceStrokeNavIcon20,
+            Icons.TouchidMrkIcon96,
+          ].map((IconComponent, index) => {
+            if (!IconComponent) return null
+            const Icon = IconComponent as React.ComponentType<{
+              paletteIndex?: number
+            }>
+            const name =
+              IconComponent.displayName ||
+              IconComponent.name ||
+              [
+                'NodocumentsMrkIcon96',
+                'ConfirmloginMrkIcon128',
+                'CardcreditmirMkrIcon32',
+                'GigaassistaintOtherBrdIcon20',
+                'BalanceStrokeNavIcon20',
+                'TouchidMrkIcon96',
+              ][index]
 
-          <div className={styles.iconCard}>
-            <div className={styles.iconWrapper}>
-              <ConfirmloginMrkIcon128 />
-            </div>
-            <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              ConfirmloginMrkIcon128
-            </Caption>
-          </div>
-
-          <div className={styles.iconCard}>
-            <div className={styles.iconWrapper}>
-              <CardcreditmirMkrIcon32 />
-            </div>
-            <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              CardcreditmirMkrIcon32
-            </Caption>
-          </div>
-
-          <div className={styles.iconCard}>
-            <div className={styles.iconWrapper}>
-              <GigaassistaintOtherBrdIcon20 paletteIndex={5} />
-            </div>
-            <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              GigaassistaintOtherBrdIcon20
-            </Caption>
-          </div>
-
-          <div className={styles.iconCard}>
-            <div className={styles.iconWrapper}>
-              <BalanceStrokeNavIcon20 paletteIndex={5} />
-            </div>
-            <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              BalanceStrokeNavIcon20
-            </Caption>
-          </div>
-
-          <div className={styles.iconCard}>
-            <div className={styles.iconWrapper}>
-              <TouchidMrkIcon96 />
-            </div>
-            <Caption size={ECaptionSize.C1} className={styles.iconName}>
-              TouchidMrkIcon96
-            </Caption>
-          </div>
+            return (
+              <div key={name} className={styles.iconCard}>
+                <div className={styles.iconWrapper}>
+                  <Icon paletteIndex={5} />
+                </div>
+                <Caption size={ECaptionSize.C1} className={styles.iconName}>
+                  {name}
+                </Caption>
+              </div>
+            )
+          })}
         </div>
       </Section>
 
@@ -134,15 +108,17 @@ export const IconsPage = () => {
               </Title>
               <div className={styles.iconGroupGrid}>
                 {entries.map(([name, IconComponent]) => {
-                  const Icon = IconComponent as any
+                  const Icon = IconComponent as React.ComponentType<{
+                    paletteIndex?: number
+                  }>
                   return (
-                    <div key={name} className={styles.iconRow}>
-                      <div className={styles.iconRowIcon}>
-                        {React.createElement(Icon, { paletteIndex: 5 })}
+                    <div key={name} className={styles.iconCard}>
+                      <div className={styles.iconWrapper}>
+                        <Icon paletteIndex={5} />
                       </div>
                       <Caption
                         size={ECaptionSize.C1}
-                        className={styles.iconRowName}
+                        className={styles.iconName}
                       >
                         {name}
                       </Caption>

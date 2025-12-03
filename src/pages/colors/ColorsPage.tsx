@@ -59,49 +59,49 @@ export const ColorsPage = () => {
         <div className={styles.examples}>
           <div className={styles.exampleCard}>
             <div className={styles.examplePreview} style={{ 
-              background: 'var(--triplex-next-ColorBrand-50-1-1-1)',
-              color: 'var(--triplex-next-ColorNeutral-100-1-1-1)'
+              background: 'var(--triplex-next-ColorBrand-50-1-4-0)',
+              color: 'var(--triplex-next-ColorNeutral-100-1-4-0)'
             }}>
               <Text size={ETextSize.B2}>Брендовая кнопка</Text>
             </div>
             <pre className={styles.code}>
 {`.button {
-  background: var(--triplex-next-ColorBrand-50-1-1-1);
-  color: var(--triplex-next-ColorNeutral-100-1-1-1);
+  background: var(--triplex-next-ColorBrand-50-1-4-0);
+  color: var(--triplex-next-ColorNeutral-100-1-4-0);
 }`}
             </pre>
           </div>
 
           <div className={styles.exampleCard}>
             <div className={styles.examplePreview} style={{ 
-              background: 'var(--triplex-next-ColorNeutral-100-1-1-1)',
-              border: '1px solid var(--triplex-next-ColorNeutral-60-1-1-1)',
-              color: 'var(--triplex-next-ColorDarkNeutral-50-1-1-1)'
+              background: 'var(--triplex-next-ColorNeutral-100-1-4-0)',
+              border: '1px solid var(--triplex-next-ColorNeutral-60-1-4-0)',
+              color: 'var(--triplex-next-ColorDarkNeutral-50-1-4-0)'
             }}>
               <Text size={ETextSize.B2}>Карточка</Text>
             </div>
             <pre className={styles.code}>
 {`.card {
-  background: var(--triplex-next-ColorNeutral-100-1-1-1);
-  border: 1px solid var(--triplex-next-ColorNeutral-60-1-1-1);
-  color: var(--triplex-next-ColorDarkNeutral-50-1-1-1);
+  background: var(--triplex-next-ColorNeutral-100-1-4-0);
+  border: 1px solid var(--triplex-next-ColorNeutral-60-1-4-0);
+  color: var(--triplex-next-ColorDarkNeutral-50-1-4-0);
 }`}
             </pre>
           </div>
 
           <div className={styles.exampleCard}>
             <div className={styles.examplePreview} style={{ 
-              background: 'var(--triplex-next-ColorError-90-1-1-1)',
-              color: 'var(--triplex-next-ColorError-50-1-1-1)',
-              border: '1px solid var(--triplex-next-ColorError-70-1-1-1)'
+              background: 'var(--triplex-next-ColorError-90-1-4-0)',
+              color: 'var(--triplex-next-ColorError-50-1-4-0)',
+              border: '1px solid var(--triplex-next-ColorError-70-1-4-0)'
             }}>
               <Text size={ETextSize.B2}>⚠️ Уведомление об ошибке</Text>
             </div>
             <pre className={styles.code}>
 {`.error {
-  background: var(--triplex-next-ColorError-90-1-1-1);
-  color: var(--triplex-next-ColorError-50-1-1-1);
-  border: 1px solid var(--triplex-next-ColorError-70-1-1-1);
+  background: var(--triplex-next-ColorError-90-1-4-0);
+  color: var(--triplex-next-ColorError-50-1-4-0);
+  border: 1px solid var(--triplex-next-ColorError-70-1-4-0);
 }`}
             </pre>
           </div>
